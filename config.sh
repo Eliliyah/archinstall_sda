@@ -41,7 +41,7 @@ systemctl enable bluetooth
 systemctl enable preload
 
 #install extra packages
-pacman -S konsole xterm fish vivaldi iwd plasma plasma-meta discord aura timeshift starship vscodium btop dolphin strawberry libreoffice-fresh ttf-daddytime-mono-nerd
+pacman -S konsole xterm fish vivaldi iwd plasma plasma-meta discord aura timeshift starship vscodium btop dolphin strawberry libreoffice-fresh ttf-daddytime-mono-nerd kde-style-oxygen-qt6
 
 #Configure journal
 echo "Storage=persistent" >> /etc/systemd/journald.conf
