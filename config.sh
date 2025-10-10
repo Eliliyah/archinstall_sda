@@ -28,6 +28,9 @@ confirm "Did the time set correctly?"
 #enable late microcode updates
 echo 1 > /sys/devices/system/cpu/microcode/reload
 
+#install system services
+pacman -S NetworkManager sddm lm_sensors acpid power-profiles-daemon bluetooth preload
+
 #Enable system services
 systemctl enable NetworkManager
 systemctl enable sddm
@@ -36,6 +39,9 @@ systemctl enable acpid
 systemctl enable power-profiles-daemon 
 systemctl enable bluetooth
 systemctl enable preload
+
+#install extra packages
+pacman -S konsole xterm fish vivaldi iwd plasma plasma-meta discord aura timeshift starship vscodium btop dolphin strawberry libreoffice-fresh ttf-daddytime-mono-nerd
 
 #Configure journal
 echo "Storage=persistent" >> /etc/systemd/journald.conf
