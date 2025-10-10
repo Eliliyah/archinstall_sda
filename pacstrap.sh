@@ -21,7 +21,4 @@ pacstrap /mnt base linux linux-firmware linux-atm linux-headers systemd --noconf
 pacstrap /mnt nano git linux-zen linux-zen-headers reflector --noconfirm
 pacstrap /mnt base-devel --noconfirm 
 
-#Generate fstab
-genfstab -U -p /mnt >> /mnt/etc/fstab
-
 
