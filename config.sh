@@ -59,11 +59,11 @@ cp /archinstall/root /etc/snapper/configs/root
 #Configure initramfs for intel
 sed -i '7,52 s/^/#/' /etc/mkinitcpio.conf
 echo "
-COMPRESSION="lzop"
-MODULES=(crc32c intel_agp i915 vmd)
+COMPRESSION="zstd"
+MODULES=(crc32c intel_agp i915 vmd kms)
 BINARIES=(btrfs)
 FILES=()
-HOOKS=(base udev autodetect modconf block keyboard keymap consolefont resume filesystems grub-btrfs-overlayfs) " >> /etc/mkinitcpio.conf
+HOOKS=(base udev autodetect modconf block keyboard keymap consolefont resume filesystems) " >> /etc/mkinitcpio.conf
 
 #Generate the initramfs
 mkinitcpio -p linux
