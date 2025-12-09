@@ -18,7 +18,7 @@ example-function() {
 
 #Install the base system
 pacstrap /mnt base linux linux-firmware linux-atm linux-headers systemd --noconfirm
-pacstrap /mnt nano git linux-zen linux-zen-headers reflector --noconfirm
+pacstrap /mnt nano git linux-lts linux-lts-headers reflector --noconfirm
 pacstrap /mnt base-devel --noconfirm 
 
 
