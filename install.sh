@@ -18,6 +18,8 @@ example-function() {
 
 confirm "Are you ready to begin?"
 
+pacman -S --needed rsync vim --noconfirm
+
 chmod +x zap.sh
 ./zap.sh
 confirm "Was the drive formatted properly?"
@@ -32,16 +34,4 @@ confirm "Was the base system installed?"
 
 genfstab -p -U /mnt >> /mnt/etc/fstab
 
-echo "git clone https://github.com/Eliliyah/archinstall_sda
-chmod +x /archinstall/arch-chroot.sh
-cd archinstall
-./arch-chroot.sh" >> /mnt/script.sh
-chmod +x /mnt/script.sh
-arch-chroot /mnt ./script.sh
-
-
-
-
-
-
-
+arch-chroot /mnt
