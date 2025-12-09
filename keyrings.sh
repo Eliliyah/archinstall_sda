@@ -29,12 +29,6 @@ pacman-key --populate
 pacman-key -u
 nano /etc/pacman.conf
 
-#Install blackarch
-#cd/tmp
-#curl -O https://blackarch.org/strap.sh
-#chmod +x strap.sh
-#./strap.sh
-
 #Update mirrors and keys
 reflector
 pacman-key --populate
