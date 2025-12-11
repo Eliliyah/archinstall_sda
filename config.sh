@@ -116,5 +116,4 @@ rsync -av /archinstall_sda/files/arch_pink_background.png /home/ellie/Pictures
 #Generate the initramfs
 mkinitcpio -p linux
 mkinitcpio -p linux-lts
-mkinitcpio -p linux-archinstall_sda
 confirm "Did the initramfs generate successfully?"
