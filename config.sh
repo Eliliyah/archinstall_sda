@@ -87,13 +87,13 @@ pacman -S --needed intel-ucode --noconfirm
 mkdir /home/ellie/proton
 pacman -S --needed rclone rsync --noconfirm
 rclone config
-rsync -av /surface/rclone.service /etc/systemd/system/rclone.service
+rsync -av /archinstall_sda/rclone.service /etc/systemd/system/rclone.service
 systemctl enable rclone
 confirm "Did rclone configure successfully?"
 
 #Configure zram
 pacman -S zram-generator --noconfirm
-rsync -av /surface/zram-generator.conf /etc/systemd/zram-generator.conf
+rsync -av /archinstall_sda/zram-generator.conf /etc/systemd/zram-generator.conf
 
 #Configure sddm
 aura -A archlinux-themes-sddm --noconfirm
@@ -109,12 +109,12 @@ confirm "Did home files sync?"
 
 #set theme elements
 pacman -S --needed beautyline oxygen --noconfirm
-rsync -av /surface/files/HotPinkAnemone.colors /home/ellie/.local/share/color-schemes/
+rsync -av /archinstall_sda/files/HotPinkAnemone.colors /home/ellie/.local/share/color-schemes/
 mkdir /home/ellie/Pictures
-rsync -av /surface/files/arch_pink_background.png /home/ellie/Pictures
+rsync -av /archinstall_sda/files/arch_pink_background.png /home/ellie/Pictures
 
 #Generate the initramfs
 mkinitcpio -p linux
 mkinitcpio -p linux-lts
-mkinitcpio -p linux-surface
+mkinitcpio -p linux-archinstall_sda
 confirm "Did the initramfs generate successfully?"
